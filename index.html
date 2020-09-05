@@ -1,0 +1,37 @@
+<!Doctype html>
+    <head>
+        <title>Information</title>
+        <link rel="stylesheet" href="design.css">
+        <script language="javascript" type="text/javascript" src="index1.js"></script>
+    </head>
+    <body>
+        <div id="addtopspace"></div>
+        <form  action="checkotp.html" method="GET" >
+                <!--Here is input tag for Full Name-->
+                <span id="addleftspace"></span>
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" pattern = "^[A-Z][a-z]*(\s[A-Z][a-z]*)+$" required="required"
+                oninvalid="invalidFullNameMsg(this)"
+                oninput="invalidFullNameMsg(this)">
+                <span id="addlefttwospace"></span>
+                <img src="Name.png" width="30" height="30">
+                <div id="addtoptwospace"></div>
+                <!--Here is input tag for Email Id-->
+                <span id="addleftspace"></span>
+                <input type="email" id="emailId" name="emailid" placeholder="Email Id" required="required"
+                oninvalid="invalidEmail(this)"
+                oninput="invalidEmail(this)">
+                <span id="addlefttwospace"></span>
+                <img src="email.png" width="30" height="30">
+                <div id="addtoptwospace"></div>
+                <!--Here is input tag for Phone Number-->
+                <span id="addleftspace"></span>
+                <input  id="phoneNumber" type="text"  placeholder="Phone Number"  oninput="takePhoneNumber(this)" pattern="\([0-9]{3}\)-[0-9]{3}-[0-9]{4}" maxlength="14" required>
+                <span id="addlefttwospace"></span>
+                <img id="myImg" src="invalid.png" width="30" height="30">
+                <div id="addtoponespace"></div>
+                <span id="comapnyName"></span><span id="stateUTs"></span>
+                <div id="addtoponespace"></div>
+                <input type="submit" value="Submit" onclick="return getData()">
+         </form>
+    </body>
+</html>
