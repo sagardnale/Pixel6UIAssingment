@@ -1,0 +1,22 @@
+<!Doctype html>
+    <head>
+        <link rel="stylesheet" href="design.css">
+        <script language="javascript" type="text/javascript" src="index2.js"></script>
+    </head>
+    <body>
+        <div id="addtopspace"></div>
+        <form id="myForm" action="#">
+            <div>
+            <p>Dear <span id="name"></span></p>
+            <p>Thank you for your enquiry.</p>
+            <p>A 4 digit verification number has been sent to your phone number: <b><span id="phonenumber"></span></b>, please enter in the following box and submit for confirmation:</p>
+            <div id="addtoponespace"></div>
+            <p>Verification code:<b><span id="verificationcode"></span></b></p>
+            <!--Here is input tag for OTP-->
+            <input type="text" id="otpNumber" placeholder="Enter 4 digit verification code"   minlength="4" maxlength="4" required>
+            <div id="addtoptwospace"></div>
+            <input type="submit" value="Validate" onclick="checkOTP()">
+            </div>
+        </form>
+    </body>
+</html>
