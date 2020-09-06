@@ -1,16 +1,12 @@
 window.addEventListener('load',() => {
-    //const params = (new URL(document.location)).searchParams;
-
     //Here we are take value of the fullName and phoneNumber from sessionStroage
     const fullname = sessionStorage.getItem("FULLNAME");
     const phoneNumber = sessionStorage.getItem("PHONENUMBER");
 
     //Take the first Name from fullName String.
     var firstName = fullname.split(" ");
-
-    //call to generate the 4 digit opt
     
-    //store the generated otp in sessionStorage
+    //get the generated otp in sessionStorage
     var otp=sessionStorage.getItem('OTP');
 
     
@@ -34,10 +30,11 @@ function checkOTP(){
         document.getElementById("myForm").action="http://pixel6.co/";   
     }else{
         if(count == 1){
-            document.getElementById("myForm").action="http://pixe.co/sdnsakjfnsdfds";
-        }else
+            document.getElementById("myForm").action="http://pixel6.co/sdnsakjfnsdfds";
+        }else{
         sessionStorage.setItem("COUNT",count-1);
         alert("Please enter the correct OTP..");
+        }
     }    
 }
 
