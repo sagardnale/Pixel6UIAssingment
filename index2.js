@@ -6,7 +6,7 @@ window.addEventListener('load',() => {
     //Take the first Name from fullName String.
     var firstName = fullname.split(" ");
     
-    //get the generated otp in sessionStorage
+    //get the generated otp from sessionStorage
     var otp=sessionStorage.getItem('OTP');
 
     
@@ -29,11 +29,12 @@ function checkOTP(){
         alert("Your OTP is correct..");
         document.getElementById("myForm").action="http://pixel6.co/";   
     }else{
-        if(count == 1){
+        if(count <= 1){
             document.getElementById("myForm").action="http://pixel6.co/sdnsakjfnsdfds";
         }else{
         sessionStorage.setItem("COUNT",count-1);
         alert("Please enter the correct OTP..");
+        document.getElementById("otpNumber").value="";
         }
     }    
 }
