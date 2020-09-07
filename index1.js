@@ -6,19 +6,19 @@ function getData(){
     const emailid = document.getElementById('emailId').value;
     const phonenumber = document.getElementById('phoneNumber').value;
     
+  // Call to generateOTP() function
     var otp = generateOTP();
 
     sessionStorage.setItem('FULLNAME',fullname);
     sessionStorage.setItem('EMAILID',emailid);
     sessionStorage.setItem('PHONENUMBER',phonenumber);
     sessionStorage.setItem('OTP',otp);
-    sessionStorage.setItem('COUNT',3);
-    
+    sessionStorage.setItem('COUNT',3); 
 
     if(phonevalidate==="Spam"){
       alert("Please enter the valid Phone Number..");
+      document.getElementById("phoneNumber").value="";
       phonevalidate="";
-      window.location.reload(false);
       return false;
     }else{
       return true;
@@ -54,13 +54,6 @@ function invalidEmail(message){
   }
 }
 
-/*function invalidPhoneNumber(message){
-  if(message.value == ''){
-    message.setCustomValidity('Enter Phone Number format (123)-456-7890');
-  }else{
-    message.setCustomValidity('');
-  }
-}*/
 
 
 /**
